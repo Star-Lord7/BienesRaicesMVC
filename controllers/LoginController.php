@@ -44,9 +44,9 @@ class LoginController{
     }
 
     public static function logout(){
-        session_start();
 
         $_SESSION = []; //Vaciamos el arreglo de la sesión
+        session_destroy(); //Destruimos la sesión
 
         header('Location: /'); //Redireccionamos al usuario a la página de inicio
     }
